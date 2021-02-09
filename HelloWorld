@@ -3,7 +3,6 @@
 #include <string>
 #include <string.h>
 #include <unistd.h>
-//unsigned int sleep(unsigned int seconds);
 using namespace std;
 
 struct fighter{
@@ -54,14 +53,6 @@ void showHP(fighter &hero1, fighter &hero2)
     cout << "Enemy's hp: " << hero2.hp << endl;
     cout << "-----" << endl << endl;
 }
-
-/*void moves(int i)
-{
-    if (i == 1)
-    {
-        cout << "1: forward" << endl;
-    }
-}*/
 
 int main() 
 {
@@ -125,6 +116,7 @@ int main()
 }
 
 /*
+//Идеи Васюкова (из задачки)
 class Item {
 public:
     // Так можно создать предмет, указав его название, вес, уровень и магичность
