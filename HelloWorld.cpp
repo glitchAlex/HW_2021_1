@@ -5,6 +5,11 @@
 #include <unistd.h>
 using namespace std;
 
+int testSum(int a, int b)
+{
+    return a + b
+}
+
 struct fighter{
     int hp = 0;
     int attack = 0;
