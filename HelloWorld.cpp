@@ -16,6 +16,11 @@ struct fighter{
     int agility = 0;
 };
 
+void testTrue()
+{
+    return True
+}
+
 void attack(fighter &attacker, fighter &defender)
 {
     cout << "-----" << endl;
