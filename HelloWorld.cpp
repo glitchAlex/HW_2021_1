@@ -20,7 +20,7 @@ void testTrue()
 {
     mystery = rand()
     truth = 4 + 5
-    return truth, mystery
+    return make_tuple(truth, mystery)
 }
 
 void attack(fighter &attacker, fighter &defender)
