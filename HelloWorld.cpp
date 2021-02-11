@@ -18,8 +18,9 @@ struct fighter{
 
 void testTrue()
 {
+    mystery = rand()
     truth = 4 + 5
-    return truth
+    return truth, mystery
 }
 
 void attack(fighter &attacker, fighter &defender)
