@@ -18,7 +18,8 @@ struct fighter{
 
 void testTrue()
 {
-    return True
+    truth = 4 + 5
+    return truth
 }
 
 void attack(fighter &attacker, fighter &defender)
