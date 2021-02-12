@@ -4,8 +4,29 @@ using namespace std;
 
 int main()
 {
-    vector<int> a = {1, 2, 3, 4, 5, 6};
-    vector<int> b = {10, 20, 30, 40, 50, 60};
+    int Na = 0;
+    int Nb = 0;
+    cin >> Na;
+    cin >> Nb;
+
+    vector<int> a = {};
+    vector<int> b = {};
+
+    for (int i = 0; i < Na; i++)
+    {
+        int element = 0;
+        cin >> element;
+        a.push_back(element);
+    }
+    for (int i = 0; i < Nb; i++)
+    {
+        int element = 0;
+        cin >> element;
+        b.push_back(element);
+    }
+
+    //vector<int> a = {1, 2, 3, 4, 5, 6};
+    //vector<int> b = {10, 20, 30, 40, 50, 60};
 
     vector<int> *p = new vector<int>[a.size()];
     (*p) = a;
