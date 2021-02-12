@@ -4,21 +4,21 @@ using namespace std;
 
 int main()
 {
-    int Na = 0;
-    int Nb = 0;
-    cin >> Na;
-    cin >> Nb;
+    int N = 0;
+    //int Nb = 0;
+    //cin >> Na;
+    cin >> N;
 
     vector<int> a = {};
     vector<int> b = {};
 
-    for (int i = 0; i < Na; i++)
+    for (int i = 0; i < N; i++)
     {
         int element = 0;
         cin >> element;
         a.push_back(element);
     }
-    for (int i = 0; i < Nb; i++)
+    for (int i = 0; i < N; i++)
     {
         int element = 0;
         cin >> element;
