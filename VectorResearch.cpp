@@ -29,13 +29,13 @@ int main()
     b.push_back(14);
     cout << "8: " << b.capacity() << endl; //capacity now is 6
 
-    //so I have a prediction that by pushing vector we increase by 1.5
+    //so I have a prediction that by pushing vector we increase it by 1.5
     //let's check using 10 and 100 elem long vectors
     vector<int> c(10, 42);
     vector<int> d(100, 42);
     c.push_back(43);
     d.push_back(43);
-    cout << "9: " << c.capacity() << " and " << d.capacity() << endl; //as expected we have vectors 15 and 150 elems long
+    cout << "9: " << c.capacity() << " and " << d.capacity() << endl; //as expected we have vectors 15 and 150 capacity long
 
     //to complete the second part of the task lets take vector b and reserve 4 elems
     b.reserve(4);
@@ -77,7 +77,7 @@ int main()
     //lets double it
     //b.reserve(200000000);
     //cout << "19: " << b.capacity() << endl; //now we have an exception
-    //programm stops working and waiting me to handle this exception
+    //programm stops working and waiting for me to handle this exception
     //strange fact: cout N19 still work in VS Code
 
     //lets try 100000001 (1 elem more than was before)
