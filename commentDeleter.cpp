@@ -43,7 +43,8 @@ int main()
 						counter = 3;
 					else
 					{
-						//out << *(it - 1); //idk
+						counter = 0;
+						out << '/';
 						out << *it;
 					}
 				}
