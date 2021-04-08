@@ -79,7 +79,7 @@ int main()
 		}
 		if (counter >= 3 && file.eof())
 		{
-			cout << endl << endl << "ERROR: INCORRECT USE OF COMMENTS.\n EXPECTED FOR '*/'." << endl;
+			cout << endl << endl << "ERROR: INCORRECT USE OF COMMENTS.\nEXPECTED FOR '*/'." << endl;
 			return 1;
 		}
 		file.close();
