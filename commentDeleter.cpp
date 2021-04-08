@@ -7,14 +7,15 @@ using namespace std;
 int main()
 {
 	string line;
-	string path_in = "for_homework.txt";
-	string path_out = "output_task.txt";
+	string path_in = "hello.txt";
+	string path_out = "output.txt";
 	fstream file(path_in);
 	ofstream out(path_out);
 	if (file.is_open() and out.is_open())
 	{
 		int counter = 0; //to count '/'
 		/*
+		counter == -1: encountered text "text example". Read until '"'
 		counter == 0: continue to read the line
 		counter == 1: watch for '/' and '*' symbols
 		counter == 2: enouctered "//" (break func used instead)
@@ -29,6 +30,11 @@ int main()
 				{
 					if (*it == '/')
 						counter += 1;
+					else if (*it == '"')
+					{
+						counter = -1;
+						out << *it;
+					}
 					else
 						out << *it;
 				}
@@ -41,7 +47,13 @@ int main()
 					}
 					else if (*it == '*') // "/**/" case. In this case we don't put anything in output until we see "*/".
 						counter = 3;
-					else
+					else if (*it == '"')
+					{
+						counter = -1;
+						out << '/';
+						out << *it;
+					}
+					else // "/ " case. Return to normal reading.
 					{
 						counter = 0;
 						out << '/';
@@ -60,18 +72,20 @@ int main()
 					else
 						counter = 3;
 				}
+				else if (counter == -1)
+					out << *it;
 			}
 			out << '\n'; //new line
 		}
 		if (counter >= 3 && file.eof())
 		{
-			cout << endl << endl << endl << "ERROR: INCORRECT USE OF COMMENTS." << endl;
+			cout << endl << endl << "ERROR: INCORRECT USE OF COMMENTS.\n EXPECTED FOR '*/'." << endl;
 			return 1;
 		}
 		file.close();
 		out.close();
 	}
 	else
-		cout << "ERROR: NO SUCH FILE OR DIRECTORY.\nCHECK BOTH." << endl;
+		cout << endl << endl << endl << "ERROR: NO SUCH FILE OR DIRECTORY.\nCHECK BOTH PATHS." << endl;
 	return 0;
 }
