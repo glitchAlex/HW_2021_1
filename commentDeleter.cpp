@@ -7,8 +7,8 @@ using namespace std;
 int main()
 {
 	string line;
-	string path_in = "hello.txt";
-	string path_out = "output.txt";
+	string path_in = "for_homework.txt";
+	string path_out = "output_task.txt";
 	fstream file(path_in);
 	ofstream out(path_out);
 	if (file.is_open() and out.is_open())
