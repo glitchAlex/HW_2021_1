@@ -52,11 +52,12 @@ int main()
 			file.close();
 			return 1;
 		}
-		file.seekg(N*(line.length()+2), ios::beg); //think '\n' considerated as 2 symbols. There is gotta be a better way to do it. Works only with same line size.
+		file.seekg(N*(line.size()+2), ios::beg); //think '\n' considerated as 2 symbols. There is gotta be a better way to do it. Works only with same line size.
 		getline(file, line);
 		cout << line;
 	}
 	else
 		cout << endl << endl << "No file opened." << endl;
+	file.close();
 	return 0;
 }
