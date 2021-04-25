@@ -79,9 +79,9 @@ int main()
 	std::chrono::duration<double> elapsed = finish - start;
 	cout << "Consistent Monte Carlo time: " << elapsed.count() << "s;\n\n";
 
-	auto start1 = std::chrono::high_resolution_clock::now();
+	start = std::chrono::high_resolution_clock::now();
 	cout << ParallelMonteCarlo() << endl;
-	auto finish1 = std::chrono::high_resolution_clock::now();
-	std::chrono::duration<double> elapsed1 = finish1 - start1;
-	cout << "Parallel Monte Carlo time: " << elapsed1.count() << "s;\n";
+	finish = std::chrono::high_resolution_clock::now();
+	elapsed = finish - start;
+	cout << "Parallel Monte Carlo time: " << elapsed.count() << "s;\n";
 }
